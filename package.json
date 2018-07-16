@@ -1,0 +1,11 @@
+{
+  "name": "google-functions-env-vars",
+  "version": "1.0.0",
+  "description": "Testing Environment variables in Google Cloud functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Simon Prickett",
+  "license": "MIT"
+}
