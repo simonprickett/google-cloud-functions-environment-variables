@@ -114,14 +114,20 @@ gcloud beta functions deploy helloEnvVars --trigger-http --clear-env-vars --proj
 * The maximum allowable size for environment variables is 32kb per function
 * You should probably add any YAML files that you use to store environment variable values in to your project's `.gitignore` file as you likely don't want these adding to source control!
 * A deployment failure will not update any environment variables, only a completely successful deployment updates environment variables
+* Once environment variables are set, deploying the function again without specifying any environment variable options will leave the current settings intact.  e.g. this does not change the values of any environment variables, nor unset any that previously existed: `gcloud functions deploy helloEnvVars --trigger-http --project <Your Google Cloud Project ID>`
+* The current values of all environment variables will be displayed in the output of `gcloud` every time you deploy a function
 
 ## Gotchas
+
+### Escaping Values on Command Line
 
 Don't forget to quote and escape values when using `--set-env-vars` or `--update-env-vars`:
 
 ```
 gcloud beta functions deploy helloEnvVars --trigger-http --set-env-vars SUCH_SECRET="Ssssh it's a secret",MANY_ENCRYPTS="rTgHi0444452\!",SO_FINALLY_CAUGHT_UP_WITH_AWS="Oh yes" --project <Your Google Cloud Project ID>
 ```
+
+### Boolean and Int Types with YAML
 
 When deploying environment variables in a YAML file, be careful of values that can be coerced to `boolean` or `int` types by the YAML parser that Google uses, e.g.:
 
