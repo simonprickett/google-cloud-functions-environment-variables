@@ -24,7 +24,7 @@ exports.helloEnvVars = (req, res) => {
                         <td>${process.env.SO_FINALLY_CAUGHT_UP_WITH_AWS || 'UNKNOWN'}</td>
                     </tr>
                 </table>
-                <p>Source code / documentation</p>
+                <p><a href="https://github.com/simonprickett/google-cloud-functions-environment-variables" target="_blank">Source code / documentation</a>.</p>
             </body>
         </html>`
     )
