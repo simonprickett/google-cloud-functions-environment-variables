@@ -4,6 +4,8 @@ Test Google Cloud Function that uses environment variables (recently added funct
 
 Also be sure to check out the [Google documentation for this](https://cloud.google.com/functions/docs/env-var).
 
+I also wrote a [Medium article about this](https://medium.com/@simon_prickett/using-environment-variables-with-google-cloud-functions-e9948f70f6cd).
+
 ## Setup
 
 Ensure that you have Google's `gcloud` commands installed and updated to the latest, including the `beta` commands.  Also ensure that you have a Google Cloud project set up with Cloud Functions enabled.
