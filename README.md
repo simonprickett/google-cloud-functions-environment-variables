@@ -131,7 +131,7 @@ gcloud beta functions deploy helloEnvVars --trigger-http --set-env-vars SUCH_SEC
 
 ### Boolean and Int Types with YAML
 
-When deploying environment variables in a YAML file, be careful of values that can be coerced to `boolean` or `int` types by the YAML parser that Google uses, e.g.:
+When deploying environment variables in a YAML file, be careful of values that can be coerced to `boolean` or `int` types by the YAML parser e.g.:
 
 ```
 SO_FINALLY_CAUGHT_UP_WITH_AWS: true
